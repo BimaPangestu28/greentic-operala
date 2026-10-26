@@ -43,7 +43,7 @@
           "flow"
         ],
         "description": "Generate OperaLa capability answers from a SoRLa contract and a prompt.",
-        "input_schema": "{\"type\":\"object\",\"properties\":{\"sorla_yaml\":{\"type\":\"string\",\"description\":\"The SoRLa contract as YAML text (the whole document, not a path). Parsed with parse_sorla_contract_from_yaml; every catalog id referenced by the answers is resolved against it.\"},\"prompt\":{\"type\":\"string\",\"description\":\"Business prompt describing the operational behaviour to author.\"},\"capability\":{\"type\":\"string\",\"enum\":[\"reconciliation\",\"bulk_ingest\"],\"description\":\"Capability to author for. Omit to have the capability classified from `prompt`; the call fails if classification is inconclusive.\"}},\"required\":[\"sorla_yaml\",\"prompt\"]}"
+        "input_schema": "{\"type\":\"object\",\"properties\":{\"sorla_yaml\":{\"type\":\"string\",\"description\":\"The SoRLa contract as YAML text (the whole document, not a path). Parsed with parse_sorla_contract_from_yaml; every catalog id referenced by the answers is resolved against it.\"},\"prompt\":{\"type\":\"string\",\"description\":\"Business prompt describing the operational behaviour to author.\"},\"capability\":{\"type\":\"string\",\"enum\":[\"reconciliation\",\"bulk_ingest\",\"business_events\"],\"description\":\"Capability to author for. Omit to have the capability classified from `prompt`; the call fails if classification is inconclusive.\"}},\"required\":[\"sorla_yaml\",\"prompt\"]}"
       },
       {
         "name": "update_operala_answers",
